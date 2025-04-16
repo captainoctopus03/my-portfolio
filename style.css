@@ -77,21 +77,3 @@ footer {
     color: white;
     cursor: pointer;
   }
-  
-  /* --- Responsive Design --- */
-  @media (max-width: 600px) {
-    .menu-toggle {
-      display: block;
-    }
-  
-    nav {
-      display: none;
-      flex-direction: column;
-      background-color: #007acc;
-      padding: 1rem;
-    }
-  
-    nav.show {
-      display: flex;
-    }
-  } */
