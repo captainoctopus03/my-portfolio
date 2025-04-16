@@ -43,6 +43,21 @@ footer {
     color: #777;
 }
 
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #007acc;
+}
+
 /* --- Navbar Styles --- */
 /* .navbar {
     display: flex;
