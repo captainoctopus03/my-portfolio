@@ -38,13 +38,31 @@
       </div>
     </section>
 
-    <section id="projects" class="spa-section">
+    <!-- <section id="projects" class="spa-section">
       <h2>Projects</h2>
       <ul>
         <li><strong>TeamDynamix Ticket Template (Ensign College)</strong> – <a href="#ensign-tdx">View Project</a></li>
         <li><strong>This Portfolio</strong> – Built with HTML, CSS, and GitHub Pages!</li>
       </ul>
-    </section>
+    </section> -->
+
+    <section id="projects" class="spa-section">
+        <h2>Projects</h2>
+        <ul class="project-list">
+          <li onclick="loadProject('ensign')">
+            <strong>TeamDynamix Ticket Template (Ensign College)</strong>
+          </li>
+          <li onclick="loadProject('portfolio')">
+            <strong>This Portfolio</strong>
+          </li>
+        </ul>
+      </section>
+      
+      <section id="project-details" class="spa-section">
+        <div id="project-content"></div>
+        <a href="#projects" onclick="clearProject()">← Back to Projects</a>
+      </section>
+      
 
     <!-- <section id="contact" class="spa-section">
       <h2>Contact</h2>
