@@ -44,7 +44,7 @@ footer {
 }
 
 /* --- Navbar Styles --- */
-.navbar {
+/* .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -94,4 +94,4 @@ footer {
     nav.show {
       display: flex;
     }
-  }
+  } */
