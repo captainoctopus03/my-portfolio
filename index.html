@@ -1,75 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Daniel's Portfolio</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <!-- <script>
-        function toggleMenu() {
-          const nav = document.getElementById('nav-links');
-          nav.classList.toggle('show');
-        }
-      </script> -->
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">Daniel</div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav id="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
 
-    <body>
+    <h1>Daniel Hancock</h1>
+    <p>Cybersecurity student & help desk technician</p>
+  </header>
 
-        <!-- <header>
-            <div class="navbar">
-                <div class="logo">Daniel</div>
-                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-                <nav id="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </div>
-        </header> -->
+  <main id="app">
+    <section id="about" class="spa-section">
+      <div class="about-container">
+        <img src="images/headshot.JPEG" alt="Photo of Daniel" class="profile-pic" />
+        <p>Hey, I'm Daniel! 👋</p>
+        <p>I'm a cybersecurity student at Southern Utah University.</p>
+      </div>
+    </section>
 
-        <header>
-            <h1>Daniel Hancock</h1>
-            <p>Cybersecurity student & help desk technician</p>
-        </header>
+    <section id="projects" class="spa-section">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>TeamDynamix Ticket Template (Ensign College)</strong> – <a href="#ensign-tdx">View Project</a></li>
+        <li><strong>This Portfolio</strong> – Built with HTML, CSS, and GitHub Pages!</li>
+      </ul>
+    </section>
 
-        <section id="about">
-            <!-- <h2>About</h2> -->
+    <section id="contact" class="spa-section">
+      <h2>Contact</h2>
+      <a href="mailto:hancockjdaniel@gmail.com" target="_blank"><img src="images/email.webp" alt="Email Logo" width="32" height="32"></a>
+      <a href="https://www.linkedin.com/in/danielhancock-cs" target="_blank"><img src="images/linkedin.webp" alt="LinkedIn Logo"></a>
+      <a href="https://github.com/captainoctopus03" target="_blank"><img src="images/github.webp" alt="GitHub Logo"></a>
+    </section>
 
-            <div class="about-container">
-                <img src="images/headshot.JPEG" alt="Photo of Daniel" class="profile-pic" />
-                <p>Hey, I'm Daniel! 👋</p>
-                <p>I'm a cybersecurity student at Southern Utah University.</p>
-            </div>
-            
-        </section>
+    <section id="ensign-tdx" class="spa-section">
+      <h2>TeamDynamix Ticket Template (Ensign College)</h2>
+      <p>This would be the project detail page. You can add the full content of the project here.</p>
+      <a href="#projects">← Back to Projects</a>
+    </section>
+  </main>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <!-- <li><strong>Password Strength Checker</strong> – <a href="https://github.com/yourusername/password-checker">View on GitHub</a></li>
-                <li><strong>Roommate Finder App</strong> – <a href="https://github.com/yourusername/roommate-app">View on GitHub</a></li> -->
-                
+  <footer>
+    <p>&copy; 2025 Daniel Hancock</p>
+  </footer>
 
-                <li><strong>TeamDynamix Ticket Template (Ensign College)</strong> – <a href="projects/ensign-tdx.html">View Project</a></li>
-                
-                <li><strong>This Portfolio</strong> – Built with HTML, CSS, and GitHub Pages!</li>
-        </section>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('show');
+    }
 
-        <section id="contact">
-            <h2>Contact</h2>
-            
-            <a href="mailto:hancockjdaniel@gmail.com" target="_blank"><img src="images/email.webp" alt="Email Logo" width="32" height="32"></a>
-            <a href="https://www.linkedin.com/in/danielhancock-cs" target="_blank"><img src="images/linkedin.webp" alt="LinkedIn Logo"></a>
-            <a href="https://github.com/captainoctopus03" target="_blank"><img src="images/github.webp" alt="GitHub Logo"></a>
-            
-            
-            
-        </section>
+    function showSection(sectionId) {
+      document.querySelectorAll('.spa-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      const active = document.getElementById(sectionId);
+      if (active) active.classList.add('active');
+    }
 
-        <footer>
-            <p>&copy; 2025 Daniel Hancock</p>
-        </footer>
+    function handleHashChange() {
+      const section = window.location.hash.substring(1) || 'about';
+      showSection(section);
+    }
 
-    </body>
+    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('load', handleHashChange);
+  </script>
+</body>
 </html>
