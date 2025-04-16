@@ -7,37 +7,56 @@
         <link rel="stylesheet" href="style.css" />
     </head>
 
+    <script>
+        function toggleMenu() {
+          const nav = document.getElementById('nav-links');
+          nav.classList.toggle('show');
+        }
+      </script>
+
     <body>
 
-    <header>
-        <h1>Hi, I'm Daniel Hancock 👋</h1>
-        <p>Cybersecurity student & IT technician</p>
-    </header>
+        <header> <!--navigation bar-->
+            <div class="navbar">
+                <div class="logo">Daniel</div>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>"
+                <nav id="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm passionate about cybersecurity, currently studying at Ensign College. I work as an IT Help Desk Technician and love solving problems and helping others stay safe online.</p>
-    </section>
+        <header>
+            <h1>Hey, I'm Daniel 👋</h1>
+            <p>Cybersecurity student & IT technician</p>
+        </header>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Password Strength Checker</strong> – <a href="https://github.com/yourusername/password-checker">View on GitHub</a></li>
-            <li><strong>Roommate Finder App</strong> – <a href="https://github.com/yourusername/roommate-app">View on GitHub</a></li>
-            <li><strong>This Portfolio Website</strong> – Built with GitHub Pages!</li>
-        </ul>
-    </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm passionate about cybersecurity, currently studying at Ensign College. I work as an IT Help Desk Technician and love solving problems and helping others stay safe online.</p>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>📧 Email: <a href="mailto:hancockjdaniel@gmail.com">hancockjdaniel@gmail.com</a></p>
-        <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/danielhancock-cs">linkedin.com/in/danielhancock-cs</a></p>
-        <p>💻 GitHub: <a href="https://github.com/captainoctopus03">github.com/captainoctopus03</a></p>
-    </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Password Strength Checker</strong> – <a href="https://github.com/yourusername/password-checker">View on GitHub</a></li>
+                <li><strong>Roommate Finder App</strong> – <a href="https://github.com/yourusername/roommate-app">View on GitHub</a></li>
+                <li><strong>This Portfolio Website</strong> – Built with GitHub Pages!</li>
+            </ul>
+        </section>
 
-    <footer>
-        <p>&copy; 2025 Daniel. Built with 💻 and ☕</p>
-    </footer>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>📧 Email: <a href="mailto:hancockjdaniel@gmail.com">hancockjdaniel@gmail.com</a></p>
+            <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/danielhancock-cs">linkedin.com/in/danielhancock-cs</a></p>
+            <p>💻 GitHub: <a href="https://github.com/captainoctopus03">github.com/captainoctopus03</a></p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Daniel Hancock</p>
+        </footer>
 
     </body>
 </html>
