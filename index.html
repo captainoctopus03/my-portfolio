@@ -65,25 +65,24 @@
   </footer>
 
   <script>
-    function showSection(sectionId) {
-      const current = document.querySelector('.spa-section.active');
-      const next = document.getElementById(sectionId);
-  
-      if (current && current !== next) {
-        current.classList.remove('active');
-        setTimeout(() => {
-          if (next) next.classList.add('active');
-        }, 400); // match the CSS transition duration
-      } else if (!current && next) {
-        next.classList.add('active');
-      }
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('show');
     }
-  
+
+    function showSection(sectionId) {
+      document.querySelectorAll('.spa-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      const active = document.getElementById(sectionId);
+      if (active) active.classList.add('active');
+    }
+
     function handleHashChange() {
       const section = window.location.hash.substring(1) || 'about';
       showSection(section);
     }
-  
+
     window.addEventListener('hashchange', handleHashChange);
     window.addEventListener('load', handleHashChange);
   </script>
